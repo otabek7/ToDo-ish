@@ -1,15 +1,3 @@
-<!-- <% let todoItems = []; %>
-
-<% function addItem(userText){
-    const todo = {
-        userText,
-        checked: false,
-        id: Date.now(),
-    };
-    todoItems.push(todo);
-    console.log(todoItems);
-}; %> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,10 +11,16 @@
       <h2>A Simple ToDo List App</h2>
       <form action="/addtask" method="POST">
         <input type="text" name="newtask" placeholder="E.g. Walk my fish" />
-        <input type="submit" value="Add Task">
+        <input type="submit" value="Add Task" />
 
-        <!-- <h2>Added Task</h2>
-        <button formaction="/removetask" type="submit">Remove</button> -->
+        <!-- <h2>Added Task</h2>-->
+        <% for( var i = 0; i < task.length; i++){ %>
+        <li>
+          <input type="checkbox" name="check" value="<%= task[i] %>" /> <%=
+          task[i] %>
+        </li>
+        <% } %>
+        <!--<button formaction="/removetask" type="submit">Remove</button> -->
       </form>
       <!-- <h2>Completed task</h2> -->
     </div>
