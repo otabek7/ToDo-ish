@@ -22,11 +22,20 @@ h3 {
 li {
   color: #f5f5f5;
   font-family: 'Josefin Sans', sans-serif;
+  
 }
 
 input{
   font-family: 'Josefin Sans', sans-serif;
   background-color: #f5f5f5 ;
+  border-radius: 5px;
+  height: 30px;
+  border: 2px solid black;
+
+}
+
+.lengthenInput{
+  width: 200px;
 }
 
 button{

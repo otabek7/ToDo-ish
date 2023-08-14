@@ -5,6 +5,8 @@ const app = express();
 const port = 3000;
 
 
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
@@ -12,6 +14,9 @@ app.set("view engine", "ejs"); //what does this do?
 
 var taskList = ["Learn how to use todo-ish"];
 var completedList = ["Water the rocks"];
+
+
+
 
 app.get("/", (req, res) => {
   //   res.render("index.ejs");
@@ -24,7 +29,7 @@ app.post("/addtask", (req, res) => {
   res.redirect("/");
 });
 
-app.post("/removetask", function (req, res) {
+app.delete("/removetask", function (req, res) {
   var completeTask = req.body.inputted;
   //check for the "typeof" the different completed task, then add into the complete task
   if (typeof completeTask === "string") {
