@@ -13,16 +13,20 @@
         <input type="text" name="newtask" placeholder="E.g. Walk my fish" />
         <input type="submit" value="Add Task" />
 
-        <!-- <h2>Added Task</h2>-->
+        <h2>Added Tasks:</h2>
         <% for( var i = 0; i < task.length; i++){ %>
         <li>
-          <input type="checkbox" name="check" value="<%= task[i] %>" /> <%=
-          task[i] %>
+          <input type="checkbox" name="inputted" value="<%= i %>" /> <%= task[i]
+          %>
+          <!--TODO: change the "value" to the time it was entered at?-->
         </li>
         <% } %>
-        <!--<button formaction="/removetask" type="submit">Remove</button> -->
+        <button formaction="/removetask" type="submit">Remove</button>
       </form>
-      <!-- <h2>Completed task</h2> -->
+      <h2>Completed task</h2>
+      <% for(var i = 0; i < complete.length; i++){ %>
+      <li><input type="checkbox" checked /><%= complete[i] %></li>
+      <% } %>
     </div>
   </body>
 </html>
