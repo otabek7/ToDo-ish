@@ -4,11 +4,19 @@
 h1 {
   font-family: "Borel", cursive;
   color: #3fc1c9;
+  font-size: 60px;
+  padding: 0px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  /* text-align: center; */
+
 }
 
 h3 {
   font-family: "Josefin Sans", sans-serif;
   color: #fc5185;
+  /* text-align: center; */
+
 }
 
 li {

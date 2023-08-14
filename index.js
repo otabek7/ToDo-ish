@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs"); //what does this do?
 
-var taskList = ["Learn how to use ToDoish"];
+var taskList = ["Learn how to use todo-ish"];
 var completedList = ["Water the rocks"];
 
 app.get("/", (req, res) => {
