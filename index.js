@@ -4,9 +4,11 @@ import bodyParser from "body-parser";
 const app = express();
 const port = 3000;
 
-app.set("view engine", "ejs"); //what does this do?
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+
+app.set("view engine", "ejs"); //what does this do?
 
 var taskList = ["Learn how to use ToDoish"];
 var completedList = ["Water the rocks"];
@@ -38,6 +40,7 @@ app.post("/removetask", function (req, res) {
   res.redirect("/");
 });
 
+app.use(express.static("public"));
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
