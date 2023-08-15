@@ -1,9 +1,26 @@
-* {
-  background-color: #364f6b;
+body {
+  background: linear-gradient(45deg, #91C788, #DDFFBC, #FEFFDE);
+  background-size: 180% 180%;
+  height: 700px;
+  animation: gradient 10s ease infinite;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 h1 {
   font-family: "Borel", cursive;
-  color: #3fc1c9;
+  color: black;
   font-size: 60px;
   padding: 0px;
   margin-top: 30px;
@@ -14,13 +31,13 @@ h1 {
 
 h3 {
   font-family: "Josefin Sans", sans-serif;
-  color: #fc5185;
+  color: black;
   /* text-align: center; */
 
 }
 
 li {
-  color: #f5f5f5;
+  color: #52734D;
   font-family: 'Josefin Sans', sans-serif;
   
 }
@@ -39,6 +56,11 @@ input{
 }
 
 button{
-  font-family: 'Josefin Sans', sans-serif;
   background-color: #f5f5f5 ;
+  border-radius: 50%;
+  border: 2px solid black;
 }
+button:hover{
+	background-color: #f5f5f5c7;
+}
+

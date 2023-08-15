@@ -29,12 +29,15 @@
         />
         <input type="submit" value="Add Task" />
       </form>
-
+    </div>
+ 
+    <div class="container-addedtasks">
       <h3>Added Tasks:</h3>
       <% for( var i = 0; i < task.length; i++){ %>
       <ul>
         <li>
           <!--TODO: change the "value" to the time it was entered at?-->
+
           <input
             type="hidden"
             class="selected"
@@ -43,23 +46,19 @@
           />
           <%= task[i] %>
 
-          <form action="/delete" method="POST">
-            <!-- <input
-              type="hidden"
-              name="todoTask"
-              value=" task[i].todoTask"
-            /> -->
-            <button class="delete" name="deleteTask" type="submit" value="<%= i %>">❌</button>
-          </form>
+            <form action="/delete" method="POST">
+              <!-- <input
+                type="hidden"
+                name="todoTask"
+                value=" task[i].todoTask"
+              /> -->
+              <button class="delete" name="deleteTask" type="submit" value="<%= i %>">❌</button>
+            </form>
+  
         </li>
       </ul>
       <% } %>
-
-      <!--Dont really need to display completed tasks.-->
-      <!-- <h3>Completed tasks:</h3> 
-      <% for(var i = 0; i < complete.length; i++){ %>
-      <li><input type="checkbox" checked /><%= complete[i] %></li>
-      <% } %> -->
     </div>
+
   </body>
 </html>
