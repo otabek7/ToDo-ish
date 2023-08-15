@@ -12,7 +12,6 @@ var taskList = ["Learn how to use todo-ish"];
 var completedList = ["Water the rocks"];
 
 app.get("/", (req, res) => {
-  //   res.render("index.ejs");
   res.render("index", { task: taskList, complete: completedList }); //what does this do?
 });
 
