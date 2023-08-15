@@ -24,15 +24,11 @@ app.post("/addtask", (req, res) => {
 
 app.post("/delete", (req, res) => {
   var requestedtodoId = req.body.deleteTask;
-  console.log("Requested id is:", requestedtodoId);
 
   for (var index = 0; index <= requestedtodoId; index++) {
-    console.log("Index id is:", index);
-    console.log(index == requestedtodoId);
 
     if (index == requestedtodoId) {
       taskList.splice(index, 1);
-      console.log("I have deleted the id at:", index);
       break;
     } 
   }
