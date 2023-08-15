@@ -29,25 +29,31 @@
         />
         <input type="submit" value="Add Task" />
       </form>
+
       <h3>Added Tasks:</h3>
       <% for( var i = 0; i < task.length; i++){ %>
       <ul>
         <li>
+          <!--TODO: change the "value" to the time it was entered at?-->
           <input
-            type="checkbox"
+            type="hidden"
             class="selected"
             name="inputted"
             value="<%= i %>"
           />
           <%= task[i] %>
-          <!--TODO: change the "value" to the time it was entered at?-->
+
+          <form action="/delete" method="POST">
+            <!-- <input
+              type="hidden"
+              name="todoTask"
+              value=" task[i].todoTask"
+            /> -->
+            <button class="delete" name="deleteTask" type="submit" value="<%= i %>">❌</button>
+          </form>
         </li>
       </ul>
       <% } %>
-
-      <form action="/removetask" method="ge">
-        <input type="submit" value="Remove Task" />
-      </form>
 
       <!--Dont really need to display completed tasks.-->
       <!-- <h3>Completed tasks:</h3> 
@@ -55,12 +61,5 @@
       <li><input type="checkbox" checked /><%= complete[i] %></li>
       <% } %> -->
     </div>
-
   </body>
 </html>
-
-<% for (var i = 0; i < task.length; i++) {
-  document.querySelectorAll(".selected")[i].addEventListener("click", function () {
-    console.log("button was selected");
-  });
-} %>
