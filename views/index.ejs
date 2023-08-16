@@ -18,8 +18,8 @@
   </head>
 
   <body>
+    <h1 class="bah">todo-ish</h1>
     <div class="container">
-      <h1 class="bah">todo-ish</h1>
       <form action="/addtask" method="POST">
         <input
           type="text"
@@ -31,46 +31,51 @@
       </form>
     </div>
 
-    <h3>Added Tasks:</h3>
-    <ul>
-      <% for( var i = 0; i < task.length; i++){ %>
-      <li>
-        <!--TODO: change the "value" to the time it was entered at?-->
-        <div class="container-addedtasks">
-          <form action="/delete" method="POST">
-            <!-- <input
+    <h2>Added Tasks:</h2>
+    <div class="liContainer">
+      <ul>
+        <% for( var i = 0; i < task.length; i++){ %>
+
+        <li>
+          <!--TODO: change the "value" to the time it was entered at?-->
+          <div class="container-addedtasks">
+            <form action="/delete" method="POST">
+              <!-- <input
                 type="hidden"
                 name="todoTask"
                 value=" task[i].todoTask"
               /> -->
-            <%= task[i] %>
+              <%= task[i] %>
 
-            <button
-              class="deleteButton"
-              name="deleteTask"
-              type="submit"
-              value="<%= i %>"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-x"
-                viewBox="0 0 16 16"
+              <button
+                class="deleteButton"
+                name="deleteTask"
+                type="submit"
+                value="<%= i %>"
               >
-                <path
-                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </button>
-            <br>
-            <br>
+                <div class="xcontainer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-x"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <br />
+              <br />
+            </form>
+          </div>
+        </li>
 
-          </form>
-        </div>
-      </li>
-      <% } %>
-    </ul>
+        <% } %>
+      </ul>
+    </div>
   </body>
 </html>
