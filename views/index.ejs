@@ -30,35 +30,47 @@
         <input type="submit" value="Add Task" />
       </form>
     </div>
- 
-    <div class="container-addedtasks">
-      <h3>Added Tasks:</h3>
+
+    <h3>Added Tasks:</h3>
+    <ul>
       <% for( var i = 0; i < task.length; i++){ %>
-      <ul>
-        <li>
-          <!--TODO: change the "value" to the time it was entered at?-->
-
-          <input
-            type="hidden"
-            class="selected"
-            name="inputted"
-            value="<%= i %>"
-          />
-          <%= task[i] %>
-
-            <form action="/delete" method="POST">
-              <!-- <input
+      <li>
+        <!--TODO: change the "value" to the time it was entered at?-->
+        <div class="container-addedtasks">
+          <form action="/delete" method="POST">
+            <!-- <input
                 type="hidden"
                 name="todoTask"
                 value=" task[i].todoTask"
               /> -->
-              <button class="delete" name="deleteTask" type="submit" value="<%= i %>">❌</button>
-            </form>
-  
-        </li>
-      </ul>
-      <% } %>
-    </div>
+            <%= task[i] %>
 
+            <button
+              class="deleteButton"
+              name="deleteTask"
+              type="submit"
+              value="<%= i %>"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </button>
+            <br>
+            <br>
+
+          </form>
+        </div>
+      </li>
+      <% } %>
+    </ul>
   </body>
 </html>
