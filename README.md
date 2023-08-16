@@ -14,9 +14,9 @@
         <p>It's a task, but you did NOT write it down! As a result, it becomes a "~todo-ish~" task; an item that ~mayyy~ or may not be completed on time.</p>
     </li>
     <li>
-        In a language that I speak, Uzbek, the word "ish" defines "a task/job".
+        In a language that I speak, Uzbek, the word "ish" defines "task/job".
         <p>
-        Since this is a to-do app where all of your tasks get written, I thought "why not translate the word to another language?"</p>
+        Since this is a to-do app where all of your tasks get written, I thought "why not translate the word "task" to another language?"</p>
     </li>
 </ol>
 
